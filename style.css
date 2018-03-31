@@ -1,0 +1,337 @@
+* {
+  margin:0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 1.75em;
+  margin-top: 50px;
+}
+
+.blue-color {
+  color: #4b9ff5;
+}
+
+.grey-color {
+  color: #848e9a;
+}
+
+.container {
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.container-header {
+  width: 70%;
+  height: 100px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #dbdbdb;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  display: flex;
+}
+
+.sidebar {
+  background-color: #fff;
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #dbdbdb;
+}
+
+.sidebar-header {
+  width: 100%;
+  height: 200px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.sidebar-header input {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+  padding: 10px;
+  background-color: #e8e8ea;
+  border-radius: 10px; 
+}
+
+.sidebar-header p {
+  padding-top: 20px;
+}
+
+.sidebar-header i {
+  align-self: flex-end;
+  font-size: 1.5em;
+}
+
+.container-header i {
+  padding-top: 5px;
+  font-size: 1.2em;
+}
+
+.edit-and-write {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 3;
+    color: #c6c6c8;
+}
+
+input:focus {
+  outline: none;
+}
+
+.sidebar-rows {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidebar-info-text {
+  padding: 5% 0;
+}
+
+.sidebar-info p {
+  color: #c6c6c8;
+  padding-left: 10px;
+}
+
+.side-picture-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: grey;
+  background-image: url(img/NEW_J-ICON_3.jpg);
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.icon-container, .icon-container p, .picture-icon {
+  margin: 0 auto;
+  text-align: center;
+  font-size: .85em;
+} 
+
+.icon-container {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+}
+
+.picture-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: grey;
+  background-image: url(img/NEW_J-ICON_3.jpg);
+  background-size: cover;
+  margin-bottom: 4px;
+}
+
+.message-input-container {
+  position: absolute;
+  /* background-color: grey; */
+  bottom: 0px;
+  right: 0px;
+  width: 70%;
+  padding: 10px;
+}
+
+.message-input-container i {
+  font-size: 1.5em;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+#iMessage-field {
+  position: relative;
+  width: 90%;
+  height: 50px;
+  /* margin-top: 10px; */
+  border: 1px solid #dbdbdb;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.message-container{
+  /* background-color: grey; */
+  width: 70%;
+  position: absolute;
+  top: 200px;
+  right: 0;
+  padding: 20px;
+}
+
+/* talk bubble contents */
+.talktext{
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+}
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+/* CSS talk bubble */
+.talk-bubble {
+	margin: 40px;
+  display: inline-block;
+  position: relative;
+	width: 200px;
+  height: auto;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+	background-color: #2093fe;
+}
+
+/* Right triangle placed top left flush. */
+.tri-right.border.left-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 0px;
+	bottom: auto;
+	border: 22px solid;
+	border-color: #2093fe transparent transparent transparent;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.border.left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: #2093fe #2093fe transparent transparent;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+}
+.tri-right.btm-left:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent #2093fe;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 transparent transparent #666;
+}
+.tri-right.btm-left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: #2093fe transparent transparent #2093fe;
+}
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 30px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 38px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: #2093fe #2093fe transparent transparent;
+}

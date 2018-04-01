@@ -4,9 +4,18 @@
   font-family: sans-serif;
 }
 
+/* .addFlextoEmojiContainer {
+  transition: all 1s ease-in-out;
+} */
+
+body {
+  background-color: #505050;
+  height: 200vh;
+}
+
 h1 {
   font-size: 1.75em;
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 .blue-color {
@@ -17,11 +26,76 @@ h1 {
   color: #848e9a;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.85);
+    animation-name: modalopen;
+    animation-duration: .5s;
+}
+
+.overlay h3 {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.overlay p {
+  font-size: 1.2em;
+}
+
+#slam {
+  position: absolute;
+  top: 45%;
+  right: 35%;
+}
+
+#loud {
+  position: absolute;
+  top: 57%;
+  right: 35%;
+}
+
+#gentle {
+  position: absolute;
+  top: 68%;
+  right: 35%;
+}
+
+.sideGrid {
+  width: 40px;
+  height: 400px;
+  border-radius: 25px;
+  background-color: #ccc;
+  position: absolute;
+  right: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.circles {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+
 .container {
   background-color: #fff;
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
+  width: 80%;
+  height: 50%;
+  margin: 200px auto 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .container-header {
@@ -30,10 +104,10 @@ h1 {
   background-color: #f9f9f9;
   border-bottom: 1px solid #dbdbdb;
   position: absolute;
-  top: 0;
   right: 0;
   padding: 20px;
   display: flex;
+  align-self: flex-end;
 }
 
 .sidebar {
@@ -151,21 +225,36 @@ input:focus {
 .message-input-container {
   position: absolute;
   /* background-color: grey; */
-  bottom: 0px;
+  bottom: 5px;
   right: 0px;
   width: 70%;
   padding: 10px;
 }
 
 .message-input-container i {
-  font-size: 1.5em;
+  font-size: 1.9em;
   margin-left: 20px;
   margin-right: 10px;
 }
 
+#emoji-icon {
+  /* background-color: red; */
+  width: 30px;
+  height: 30px;
+  background-image: url(img/emoji-icon.svg);
+  margin: 10px 10px 0 10px;
+  background-size: 200% 200%;
+  background-position: top center;
+  display: inline-block;
+}
+
+#emoji-icon:hover {
+  background-position: bottom center;
+}
+
 #iMessage-field {
   position: relative;
-  width: 90%;
+  width: 80%;
   height: 50px;
   /* margin-top: 10px; */
   border: 1px solid #dbdbdb;
@@ -200,7 +289,7 @@ input:focus {
 	margin: 40px;
   display: inline-block;
   position: relative;
-	width: 200px;
+	width: auto;
   height: auto;
   color: white;
   padding: 20px;
@@ -208,130 +297,117 @@ input:focus {
 	background-color: #2093fe;
 }
 
-/* Right triangle placed top left flush. */
-.tri-right.border.left-top:before {
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-  left: -40px;
-	right: auto;
-  top: -8px;
-	bottom: auto;
-	border: 32px solid;
-	border-color: #666 transparent transparent transparent;
-}
-.tri-right.left-top:after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-  left: -20px;
-	right: auto;
-  top: 0px;
-	bottom: auto;
-	border: 22px solid;
-	border-color: #2093fe transparent transparent transparent;
-}
-
-/* Right triangle, left side slightly down */
-.tri-right.border.left-in:before {
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-  left: -40px;
-	right: auto;
-  top: 30px;
-	bottom: auto;
-	border: 20px solid;
-	border-color: #666 #666 transparent transparent;
-}
-.tri-right.left-in:after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-  left: -20px;
-	right: auto;
-  top: 38px;
-	bottom: auto;
-	border: 12px solid;
-	border-color: #2093fe #2093fe transparent transparent;
-}
-
-/*Right triangle, placed bottom left side slightly in*/
-.tri-right.border.btm-left:before {
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: -8px;
-  right: auto;
-  top: auto;
-	bottom: -40px;
-	border: 32px solid;
-	border-color: transparent transparent transparent #666;
-}
 .tri-right.btm-left:after{
 	content: ' ';
 	position: absolute;
 	width: 0;
 	height: 0;
-	left: 0px;
-  right: auto;
+	right: 10px;
+  left: auto;
   top: auto;
 	bottom: -20px;
 	border: 22px solid;
-	border-color: transparent transparent transparent #2093fe;
+	border-color: transparent #2093fe transparent transparent;
 }
 
-/*Right triangle, placed bottom left side slightly in*/
-.tri-right.border.btm-left-in:before {
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: 30px;
-  right: auto;
-  top: auto;
-	bottom: -40px;
-	border: 20px solid;
-	border-color: #666 transparent transparent #666;
-}
-.tri-right.btm-left-in:after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: 38px;
-  right: auto;
-  top: auto;
-	bottom: -20px;
-	border: 12px solid;
-	border-color: #2093fe transparent transparent #2093fe;
+.emoji-container {
+  width: 200px;
+  height: 200px;
+  background-color: #d0d1d5;
+  position: absolute;
+  bottom: 80px;
+  left: 27%;
+  border-radius: 5%;
+  display: none;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-around;
+  /* transition: all 0.3s ease-in; */
 }
 
-/*Right triangle, placed bottom right side slightly in*/
-.tri-right.border.btm-right-in:before {
-	content: ' ';
+.add-triangle:after {
+  content: ' ';
 	position: absolute;
 	width: 0;
 	height: 0;
+	left: 5px;
   left: auto;
-	right: 30px;
-	bottom: -40px;
-	border: 20px solid;
-	border-color: #666 #666 transparent transparent;
-}
-.tri-right.btm-right-in:after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-  left: auto;
-	right: 38px;
+  top: auto;
 	bottom: -20px;
-	border: 12px solid;
-	border-color: #2093fe #2093fe transparent transparent;
+	border: 22px solid;
+	border-color: transparent transparent transparent #d0d1d5;
+}
+
+.emojis {
+  /* background-color: grey; */
+  width: 30px;
+  height: 30px;
+  margin: 15px 5px;
+  /* justify-content: space-evenly; */
+  
+}
+
+#emoji-one {
+  background-image: url(img/Layer-1.png);
+  background-size: cover;
+}
+
+#emoji-two {
+  background-image: url(img/Layer-7.png);
+  background-size: cover;
+}
+
+#emoji-three {
+  background-image: url(img/Layer-3.png);
+  background-size: cover;
+}
+
+#emoji-four {
+  background-image: url(img/Layer-4.png);
+  background-size: cover;
+}
+
+#emoji-five {
+  background-image: url(img/Layer-5.png);
+  background-size: cover;
+}
+
+#emoji-six {
+  background-image: url(img/Layer-6.png);
+  background-size: cover;
+}
+
+#emoji-seven {
+  background-image: url(img/Layer-7.png);
+  background-size: cover;
+}
+
+#emoji-eight {
+  background-image: url(img/Layer-8.png);
+  background-size: cover;
+}
+
+#emoji-nine {
+  background-image: url(img/Layer-9.png);
+  background-size: cover;
+}
+
+#emoji-ten {
+  background-image: url(img/Layer-10.png);
+  background-size: cover;
+}
+
+#emoji-eleven {
+  background-image: url(img/Layer-1.png);
+  background-size: cover;
+}
+
+#emoji-twelve {
+  background-image: url(img/Layer-3.png);
+  background-size: cover;
+}
+
+@keyframes modalopen {
+    from{opacity: 0}
+    to{opacity: 1}
 }

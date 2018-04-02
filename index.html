@@ -16,14 +16,19 @@
 <body>
   <div class="container">
     <div class="overlay">
-      <h3>Send with Effect</h3>
-      <p id="slam">Slam</p>
-      <p id="loud">Loud</p>
-      <p id="gentle">Gentle</p>
-      <div class="sideGrid">
-        <div class="circles"></div>
-        <div class="circles"></div>
-        <div class="circles"></div>
+      <div class="effects-container">
+        <h3>Send with Effect</h3>
+        <ul>
+          <li >Slam</li>
+          <li id="loud">Loud</li>
+          <li id="gentle">Gentle</li>
+        </ul>
+        <div class="sideGrid">
+          <div class="circles" id="slam"></div>
+          <div class="circles"></div>
+          <div class="circles"></div>
+        </div>
+        <i id="modal-closeBtn" class="fa fa-times-circle" aria-hidden="true"></i>
       </div>
     </div>
     <div class="animated bounceIn emoji-container add-triangle">
